@@ -19,8 +19,9 @@ routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
-// Listagem de prestadores de serviço (providers)
+// Routes list
 routes.get('/providers', ProviderController.index);
+routes.get('/appointments', AppointmentController.index);
 
 // Cadastra agendamentos
 routes.post('/appointments', AppointmentController.store);
