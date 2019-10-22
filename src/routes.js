@@ -21,15 +21,17 @@ routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
-// Routes list
+// List Routes
 routes.get('/providers', ProviderController.index);
 routes.get('/appointments', AppointmentController.index);
 routes.get('/schedules', ScheduleController.index);
 routes.get('/notifications', NotificationController.index);
 
-// Cadastra agendamentos
+// Store Routes
 routes.post('/appointments', AppointmentController.store);
-
 routes.post('/files', upload.single('file'), FileController.store);
+
+// Update Routes
+routes.put('/notifications/:id', NotificationController.update);
 
 export default routes;
