@@ -34,4 +34,7 @@ routes.post('/files', upload.single('file'), FileController.store);
 // Update Routes
 routes.put('/notifications/:id', NotificationController.update);
 
+// Delete Routes
+routes.delete('/appointments/:id', AppointmentController.delete);
+
 export default routes;
